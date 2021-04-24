@@ -1,0 +1,522 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>求解器 底层修改 算例3 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../gitbookuse/guREADME.html" />
+    
+    
+    <link rel="prev" href="solu2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    openFOAM Operation Knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../openknow/codefileexp.html">
+            
+                <a href="../openknow/codefileexp.html">
+            
+                    
+                    代码文件夹说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../openknow/codeerror.html">
+            
+                <a href="../openknow/codeerror.html">
+            
+                    
+                    代码报错处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../openknow/tquick.html">
+            
+                <a href="../openknow/tquick.html">
+            
+                    
+                    终端常用快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../openknow/instructions.html">
+            
+                <a href="../openknow/instructions.html">
+            
+                    
+                    常见指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../openknow/knowledge.html">
+            
+                <a href="../openknow/knowledge.html">
+            
+                    
+                    常见知识点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../README2.html">
+            
+                <a href="../README2.html">
+            
+                    
+                    openFOAM Operation Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="LES.html">
+            
+                <a href="LES.html">
+            
+                    
+                    LES算例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="RAS.html">
+            
+                <a href="RAS.html">
+            
+                    
+                    RAS算例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="multi.html">
+            
+                <a href="multi.html">
+            
+                    
+                    多相流算例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="compress.html">
+            
+                <a href="compress.html">
+            
+                    
+                    可压缩流算例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="heat.html">
+            
+                <a href="heat.html">
+            
+                    
+                    传热学算例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="dymesh.html">
+            
+                <a href="dymesh.html">
+            
+                    
+                    动态网格算例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="solu1.html">
+            
+                <a href="solu1.html">
+            
+                    
+                    求解器算例1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="solu2.html">
+            
+                <a href="solu2.html">
+            
+                    
+                    求解器算例2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.9" data-path="solu3.html">
+            
+                <a href="solu3.html">
+            
+                    
+                    求解器 底层修改 算例3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../gitbookuse/guREADME.html">
+            
+                <a href="../gitbookuse/guREADME.html">
+            
+                    
+                    gitbook use guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >求解器 底层修改 算例3</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x6C42;&#x89E3;&#x5668;-&#x5E95;&#x5C42;&#x4FEE;&#x6539;-&#x7B97;&#x4F8B;3"><em>&#x6C42;&#x89E3;&#x5668; &#x5E95;&#x5C42;&#x4FEE;&#x6539; &#x7B97;&#x4F8B;3</em></h2>
+<p><em>openFoam &#x6C42;&#x89E3;&#x5668; &#x5E95;&#x5C42;&#x4FEE;&#x6539; &#x7B97;&#x4F8B;3</em></p>
+<p>1/<br>&#x7B97;&#x4F8B;&#x6587;&#x4EF6;&#x5939;&#xFF1A;
+/home/dyfluid/OKS-toUser/OKS2021March/programming/3.Write/8.currentFoam</p>
+<p>&#x590D;&#x5236;&#x4E8E;/home/dyfluid/OpenFOAM/OpenFOAM-8/applications/solvers/incompressible/pisoFoam</p>
+<p>2/<br>&#x4FEE;&#x6539; make - files&#xFF1A;</p>
+<p> &#x52A0; <em>USER</em>  &#x52A0; Test</p>
+<p>3/<br>&#x5728;fileds.h&#x4E2D;&#x52A0;</p>
+<pre><code>Info&lt;&lt; &quot;Reading field alpha\n&quot; &lt;&lt; endl;
+volScalarField alpha
+(
+    IOobject
+    (
+        &quot;alpha&quot;,
+        runTime.timeName(),
+        mesh,
+        IOobject::MUST_READ,
+        IOobject::AUTO_WRITE
+    ),
+    mesh//0&#x4E2D;&#x6709;alpha&#x8FB9;&#x754C;&#x6761;&#x4EF6;&#xFF0C;&#x521D;&#x503C;&#x597D;&#x7ED9;&#xFF0C;MUST_READ,
+);//&#x5728;.H&#x573A;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x6807;&#x91CF;alpha&#x573A;&#xFF0C;&#x56E0;&#x4E3A;c&#x573A;&#x4E2D;&#x6709;alpha
+
+dimensionedScalar dp(dimLength, 1e-5);//&#x5B9A;&#x4E49;&#x5728;.H&#x573A;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x6807;&#x91CF;dp&#x53CA;&#x5355;&#x4F4D;&#xFF0C;&#x56E0;&#x4E3A;&#x56E0;&#x4E3A;c&#x573A;&#x4E2D;&#x6709;dp
+
+Info&lt;&lt; &quot;Reading field c\n&quot; &lt;&lt; endl;
+volScalarField c
+(
+    IOobject
+    (
+        &quot;c&quot;,
+        runTime.timeName(),
+        mesh,
+        IOobject::NO_READ,
+        IOobject::AUTO_WRITE
+    ),
+    alpha/(4.0/3.0*M_PI*pow3(dp/2.0)),
+    alpha.boundaryField().types()
+);//&#x56E0;&#x4E3A;c&#x624D;&#x6709;&#x4F20;&#x8F93;&#x65B9;&#x7A0B;&#xFF0C;&#x5B9A;&#x4E49;&#x6E90;&#x9879;&#x4E2D;&#x7684;c&#xFF0C;c&#x7684;&#x521D;&#x503C;&#x4E0D;&#x597D;&#x7ED9;&#xFF0C;&#x6240;&#x4EE5;&#x901A;&#x8FC7;alpha&#x7B97;&#x51FA;&#xFF0C;&#x5E76;&#x53C2;&#x8003;alpha&#x8FB9;&#x754C;&#x6761;&#x4EF6;
+</code></pre><p>4/<br>&#x5728;pisoFoam.C&#x4E2D;&#x52A0;&#xFF1A; </p>
+<pre><code>    dimensionedScalar rhol(dimDensity, 1000);
+    dimensionedScalar rhod(dimDensity, 1500);//&#x5B9A;&#x4E49;&#x6807;&#x91CF;rhol&#x548C;rhod&#xFF0C;&#x5E76;&#x7ED9;&#x503C;&#xFF0C;&#x56E0;&#x4E3A;&#x4E4B;&#x540E;&#x9700;&#x8981;
+    volScalarField nu = turbulence-&gt;nu();
+    volScalarField mu = nu*rhol;//&#x5B9A;&#x4E49;&#x9700;&#x8981;&#x8BA1;&#x7B97;&#x7684;&#x6807;&#x91CF;nu&#xFF0C;mu&#xFF0C;&#x56E0;&#x4E3A;&#x4E4B;&#x540E;&#x9700;&#x8981;
+
+    fvScalarMatrix cEqn
+    {
+       fvm::ddt(c)
+     + fvm::div(phi, c)
+     - fvc::laplacian(nu, c)
+    };
+
+    cEqn.solve();//c&#x7684;&#x4F20;&#x8F93;&#x65B9;&#x7A0B;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x5355;&#x4F4D;&#xFF0C;&#x6CE8;&#x610F;&#x663E;&#x9690;&#x6027;
+
+    dimensionedScalar g(dimAcceleration, 9.81);//&#x5B9A;&#x4E49;&#x6807;&#x91CF;&#x52A0;&#x901F;&#x5EA6;g&#xFF0C;&#x5E76;&#x7ED9;&#x503C;&#xFF0C;&#x56E0;&#x4E3A;&#x4E4B;&#x540E;&#x9700;&#x8981;
+
+    volVectorField us = sqr(dp)*(rhod - rhol)*g/18.0/mu*vector(0,-1,0);//&#x5B9A;&#x4E49;&#x77E2;&#x91CF;us&#xFF0C;&#x6CA1;&#x6709;&#x4F20;&#x8F93;&#x65B9;&#x7A0B;
+
+    volVectorField F = -3.0*M_PI*mu*dp*(-us);//&#x5B9A;&#x4E49;&#x77E2;&#x91CF;F&#xFF0C;&#x6CA1;&#x6709;&#x4F20;&#x8F93;&#x65B9;&#x7A0B;
+</code></pre><p>5/<br>&#x5728;UEqn.H&#x4E2D;&#x52A0;&#x6E90;&#x9879;</p>
+<ul>
+<li>F*c/rhol</li>
+</ul>
+<p>6/<br>&#x5728;lockExchange/constant/transportProperties&#x4E2D;&#x7B2C;37&#x884C;
+&#x52A0;<code>transportModel  Newtonian;</code></p>
+<p>7/<br>&#x68C0;&#x67E5;Make/linux64GccDPInt32Opt/variables&#x4E2D;
+&#x662F;&#x5426;&#x4E3A;<code>EXE = $(FOAM_USER_APPBIN)/pisoFoamTest</code></p>
+<p>8/<br>&#x8FD0;&#x884C;&#x540E;&#x6839;&#x636E;&#x63D0;&#x793A;&#x5728;fvSchemes&#x4E2D;&#x52A0;</p>
+<pre><code>div(phi,c)  Gauss linear;
+div((nuEff*dev2(T(grad(U)))))  Gauss linear;//&#x7ED9;&#x683C;&#x5F0F;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="solu2.html" class="navigation navigation-prev " aria-label="Previous page: 求解器算例2">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../gitbookuse/guREADME.html" class="navigation navigation-next " aria-label="Next page: gitbook use guide">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"求解器 底层修改 算例3","level":"1.2.9","depth":2,"next":{"title":"gitbook use guide","level":"1.3","depth":1,"path":"gitbookuse/guREADME.md","ref":"gitbookuse/guREADME.md","articles":[]},"previous":{"title":"求解器算例2","level":"1.2.8","depth":2,"path":"openexam/solu2.md","ref":"openexam/solu2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"openexam/solu3.md","mtime":"2021-04-22T05:15:15.285Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-24T08:59:27.206Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
